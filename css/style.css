@@ -1,0 +1,1262 @@
+/*GENERELLE REGLER*/
+
+
+/*Dette fjerner browsernes padding og margin fra selve body og ikke fra f.eks. lister og overskrifter, hvor vi ofte gerne vil beholde det*/
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/*Box-sizing skal gælde for alle elementer, hvorfor den sættes på * og ikke bare body */
+* {
+    box-sizing: border-box;
+}
+
+/*Da vi bruger flexbox er det en god idé altid at sætte billeder til 100% width og så tilpasse den container rundt om billedet efterfølgende*/
+img {
+    width: 100%;
+}
+
+
+/*HEDADER START*/
+header {
+    background: #FFF270;
+    width: 100%;
+    padding: 10px;
+}
+
+/*NAVIGATION - responsiv med flexbox*/
+#logo-burger {
+    display: flex;
+    align-items: center;
+    margin: 0 .5em;
+}
+
+#logo-burger a {
+    margin-right: auto;
+    width: 100px;
+}
+
+#main-nav {
+    display: flex;
+    margin-right: .5em;
+}
+
+#main-nav a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    font-size: 25px;
+    line-height: 25px;
+}
+
+#main-nav a:hover {
+    color: #FF8FDF;
+}
+
+
+/*Denne skjuler burgermenuens checkbox som aktiverer toggle funktionen*/
+.hidden {
+    display: none;
+}
+
+/*HEDADER SLUT*/
+
+
+/* CSS start forsiden */
+
+.container-2 {
+    display: flex;
+    text-align: center;
+    position: relative;
+
+}
+
+.container-2 a {
+    font-size: 30px;
+    text-decoration-color: black;
+}
+
+.bestil-udvalg {
+    width: 100%;
+    position: relative;
+
+}
+
+.bestil-udvalg a {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+}
+
+.bestil-udvalg img {
+    width: 100%;
+    height: auto;
+    opacity: 0.3;
+}
+
+.om-os {
+    width: 100%;
+    position: relative;
+
+}
+
+.om-os a {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+}
+
+.om-os img {
+    width: 100%;
+    height: auto;
+    opacity: 0.3;
+}
+
+.job {
+    width: 100%;
+    height: auto;
+    position: relative;
+
+}
+
+.job a {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+
+}
+
+.job img {
+    width: 100%;
+    height: auto;
+    opacity: 0.3;
+}
+
+
+
+/* Css slut til forsiden*/
+
+
+/*css start tabel til bestil/udvalg af donuts responsiv til mobil*/
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin: 6px;
+    border-collapse: collapse;
+    border-radius: 25px;
+    align-content: center;
+}
+
+
+td,
+th {
+    border: 1px solid #FF8FDF;
+    background-color: #FF8FDF;
+    color: #FFF270;
+    text-align: center;
+    padding: 0px;
+}
+
+
+/*css slut tabel til bestil/udvalg af donuts responsiv til mobil*/
+
+
+
+
+/*css start grid til siden bestil/udvalg af donuts responsiv til mobil*/
+
+/*vandret, lodret, vandret, lodret, */
+
+.bestil-knap {
+    padding: 10px;
+    width: auto;
+    max-width: 100px;
+}
+
+h3 {
+    padding-left: 20px;
+    padding-top: 20px;
+    font-size: 30px;
+}
+
+.grid-container-chokolade {
+
+    background-color: #FDFDEB;
+    border-radius: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    padding-top: 20px;
+    text-align: center;
+    padding-left: 20px;
+}
+
+
+.chokokiks {
+    grid-area: 1 / 1 / 2 / 2;
+    width: 100px;
+    height: auto;
+    padding-bottom: 50px;
+
+
+}
+
+.KEX {
+    grid-area: 1 / 2 / 2 / 3;
+    width: 100px;
+    height: auto;
+}
+
+.kinder {
+    grid-area: 1 / 3 / 2 / 4;
+    width: 100px;
+    height: auto;
+}
+
+.oreo {
+    grid-area: 2 / 1 / 3 / 2;
+    width: 100px;
+    height: auto;
+}
+
+.p-tearte {
+    grid-area: 2 / 2 / 3 / 3;
+    width: 93px;
+    height: auto;
+}
+
+.smarties {
+    grid-area: 2 / 3 / 3 / 4;
+    width: 100px;
+    height: auto;
+}
+
+.smil-choko {
+    grid-area: 3 / 1 / 4 / 2;
+    width: 100px;
+    height: auto;
+}
+
+.toblerone {
+    grid-area: 3 / 2 / 4 / 3;
+    width: 90px;
+    height: auto;
+}
+
+.lion {
+    grid-area: 3 / 3 / 4 / 4;
+    width: 110px;
+    height: auto;
+}
+
+
+.grid-container-karamel {
+    width: auto;
+    background-color: #FDFDEB;
+    border-radius: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    padding-top: 20px;
+    text-align: center;
+    margin: 20px;
+}
+
+.salt-karamel {
+    grid-area: 1 / 1 / 2 / 2;
+    width: 100px;
+    height: auto;
+    padding-bottom: 50px;
+}
+
+.sweet-karamel {
+    grid-area: 1 / 2 / 2 / 3;
+    width: 110px;
+    height: auto;
+}
+
+.mars {
+    grid-area: 1 / 3 / 2 / 4;
+    width: 108px;
+    height: auto;
+}
+
+
+.grid-container-boern {
+    width: auto;
+    background-color: #FDFDEB;
+    border-radius: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding-top: 20px;
+    text-align: center;
+    margin: 20px;
+}
+
+.sour {
+    grid-area: 1 / 1 / 2 / 2;
+    width: 100px;
+    height: auto;
+    padding-bottom: 50px;
+}
+
+.tivoli {
+    grid-area: 1 / 2 / 2 / 3;
+    width: 90px;
+    height: auto;
+}
+
+.skumfidus {
+    grid-area: 1 / 3 / 2 / 4;
+    width: 100px;
+    height: auto;
+}
+
+.kylling1 {
+    grid-area: 2 / 1 / 3 / 2;
+    width: 110px;
+    height: auto;
+}
+
+.kylling2 {
+    grid-area: 2 / 2 / 3 / 3;
+    width: 100px;
+    height: auto;
+}
+
+.mogm {
+    grid-area: 2 / 3 / 3 / 4;
+    width: 125px;
+    height: auto;
+}
+
+/*slut css grid til siden responsiv til mobil */
+
+
+/*start css til siden "om os" til mobil*/
+
+
+h1 {
+    font-size: 30px;
+    margin-top: 10px;
+    padding-left: 20px;
+
+}
+
+p {
+    font-size: 25px;
+    line-height: 45px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+
+
+}
+
+.om-team-bronuts {
+    width: 100%;
+    height: auto;
+    background-color: #FDFDEB;
+    margin: 8px;
+    border-radius: 25px;
+    box-shadow: 4px 4px #D8D8D8;
+
+}
+
+.vision {
+    width: 100%;
+    height: auto;
+    background-color: #FDFDEB;
+    margin: 8px;
+    border-radius: 25px;
+    box-shadow: 4px 4px #D8D8D8;
+}
+
+
+.mission {
+    width: 100%;
+    height: auto;
+    background-color: #FDFDEB;
+    margin: 8px;
+    border-radius: 25px;
+    box-shadow: 4px 4px #D8D8D8;
+}
+
+
+.trustpilot-1 {
+    width: 100%;
+    margin: 2px;
+    justify-content: space-around;
+
+}
+
+.trustpilot-2 {
+    width: 100%;
+    margin: 2px;
+    justify-content: space-around;
+    display: none;
+
+}
+
+.trustpilot-3 {
+    width: 100%;
+    margin: 2px;
+    justify-content: space-around;
+    display: none;
+
+}
+
+
+.container-1 {
+    display: flex;
+    flex-direction: row;
+}
+
+/*slut css til siden "om os" til mobil*/
+
+
+
+
+
+/*FOOTER START*/
+
+/*generel footer*/
+
+* {
+    box-sizing: border-box;
+    font-family: 'Patrick Hand', cursive;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+footer {
+    line-height: 30px;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.ft-overskrift {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+
+
+/* sticky footer i øverst i footer (gul)*/
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+
+}
+
+.container {
+    flex: 1;
+    /* same as flex-grow: 1; */
+}
+
+/*responsiv flex*/
+
+.ft-butikker {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #FFF270;
+
+}
+
+.ft-butikker-tekst {
+    text-align: center;
+    padding: 10px;
+    min-width: 20px;
+    /*200px*/
+    ;
+    width: 33%;
+}
+
+.ft-butikker-tekst a {
+    color: #FF8FDF;
+    font-size: 15px;
+}
+
+
+/*sticky footer i bunden af siden (lyserrød)*/
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1;
+    /* same as flex-grow: 1; */
+}
+
+/*responsiv flex*/
+
+.ft-overskrift {}
+
+.ft-main {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #FF8FDF;
+}
+
+.ft-main-tekst {
+    text-align: center;
+    padding: 10px;
+    /*200px*/
+    ;
+    color: #FFF270;
+    width: 33%;
+}
+
+.ft-main-tekst a {
+    color: #FFF270;
+    font-size: 15px;
+}
+
+
+/*style sociale medier ikoner*/
+.ft-social {
+    padding: 10px;
+}
+
+.ft-social-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 20px;
+    text-align: center;
+    width: 33%;
+}
+
+/* FOOTER SLUT*/
+
+
+
+/*MEDIA QUERY MOBILE */
+
+@media all and (max-width: 599px) {
+
+    /*START HEADER NAV*/
+    header {
+        display: block;
+    }
+
+    #logo-burger {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /*label er selve burgerikonet*/
+    #logo-burger label {
+        display: block;
+        font-size: 2em;
+        cursor: pointer;
+        /*laver en hånd i stedet for en pil, når man kører hen over burgermenuen*/
+    }
+
+    /*Dette gør at burgermenuen folder sig ud, når man klikker på den - eller rettere sagt den checkboks som er skjult bag den*/
+    #toggle:checked + #main-nav {
+        display: block;
+    }
+
+    /*Den primære navigation skjules på den lille skærm*/
+    #main-nav {
+        display: none;
+    }
+
+    #main-nav a {
+        text-align: center;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    /*Dette påvirker dropdown i mobilversionen, da hover ikke virker med fingeren, så nu er det hele foldet ud, border er fjernet og skriften er mindre.*/
+    #main-nav .dropdown-content a {
+        font-size: 0.9em;
+        border: none;
+    }
+
+    /*SLUT HEADER NAV*/
+
+
+    /* start css til siden "om os" billeder flex responsiv */
+
+    .container-2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* slut css til siden "om os" billeder flex responsiv */
+
+
+}
+
+/*MEDIA QUERY TABLET AND ABOVE*/
+
+@media all and (min-width: 600px) {
+
+    /* START HEADER NAV*/
+    nav {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+    }
+
+
+    #main-nav {
+        justify-content: space-evenly;
+        min-width: 50%;
+        margin: 0;
+    }
+
+    #main-nav a {
+        margin: 0 .5em;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    /*Dette fjerner burgermenu ikonet*/
+    label {
+        display: none;
+    }
+
+
+    .ft-main {
+        justify-content: space-evenly;
+    }
+
+    .ft-butikker {
+        justify-content: space-evenly;
+    }
+
+    /* SLUT HEADER NAV*/
+
+
+    /* CSS start til siden forsiden - billeder flex responsiv */
+
+    .container-2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* CSS slut til siden forsiden - billeder flex responsiv */
+
+
+    /*START TABEL */
+
+    table {
+        border-collapse: collapse;
+        border-radius: 25px;
+        align-content: center;
+
+
+    }
+
+    td,
+    th {
+        border: 1px solid #FF8FDF;
+        background-color: #FF8FDF;
+        color: #FFF270;
+        text-align: center;
+        padding: 0px;
+    }
+
+    /*SLUT TABEL */
+
+
+    /*start css grid */
+
+    /* vandret, lodret, vandret, lodret */
+
+    bestil-knap {
+        padding: 20px;
+    }
+
+    h3 {
+        padding-left: 20px;
+        padding-top: 20px;
+        font-size: 30px;
+    }
+
+    .grid-container-chokolade {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        padding-top: 20px;
+        text-align: center;
+        margin: 20px;
+    }
+
+    .chokokiks {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .KEX {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+
+    .kinder {
+        grid-area: 1 / 3 / 2 / 4;
+    }
+
+    .oreo {
+        grid-area: 1 / 4 / 2 / 5;
+    }
+
+    .p-tearte {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    .smarties {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+
+    .smil-choko {
+        grid-area: 2 / 3 / 3 / 4;
+    }
+
+    .toblerone {
+        grid-area: 2 / 4 / 3 / 5;
+    }
+
+    .lion {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+
+
+    .grid-container-karamel {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        padding-top: 20px;
+        text-align: center;
+        margin: 20px;
+    }
+
+    .salt-karamel {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .sweet-karamel {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+
+    .mars {
+        grid-area: 1 / 3 / 2 / 4;
+    }
+
+
+
+    .grid-container-boern {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        padding-top: 20px;
+        text-align: center;
+        margin: 20px;
+
+    }
+
+    .sour {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .tivoli {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+
+    .skumfidus {
+        grid-area: 1 / 3 / 2 / 4;
+    }
+
+    .kylling1 {
+        grid-area: 1 / 4 / 2 / 5;
+    }
+
+    .kylling2 {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    .mogm {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+
+    /*slut css grid */
+
+
+    /*start css til siden "om os" */
+    .container-1 {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .trustpilot {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    .trustpilot-1 {
+        width: 100%;
+        margin: 2px;
+        justify-content: space-around;
+        display: block;
+
+    }
+
+    .trustpilot-2 {
+        width: 100%;
+        margin: 2px;
+        justify-content: space-around;
+        display: block;
+
+    }
+
+    .trustpilot-3 {
+        width: 100%;
+        margin: 2px;
+        justify-content: space-around;
+
+
+
+    }
+
+    /*slut css til siden "om os" */
+
+
+}
+
+
+
+/*MEDIA QUERY LAPTOP AND ABOVE*/
+
+@media all and (min-width: 1024px) {
+
+    /*START HEADER NAVIGATION*/
+    nav {
+        flex-direction: row;
+    }
+
+    /*Dette skubber menuen ud til højre ved at bruge al margin til højre for logoet*/
+    #logo-burger {
+        margin-right: auto;
+    }
+
+    /*SLUT HEADER NAVIGATION*/
+
+
+
+    /* CSS START FORSIDE billeder flex responsiv */
+
+    .container-2 {
+        display: flex;
+        flex-direction: row;
+    }
+
+    /* css START tabel*/
+
+    table {
+        border-collapse: collapse;
+        border-radius: 25px;
+        align-content: center;
+    }
+
+    td,
+    th {
+        border: 1px solid #FF8FDF;
+        background-color: #FF8FDF;
+        color: #FFF270;
+        text-align: center;
+        padding-left: 60px;
+        padding-right: 60px;
+
+    }
+
+
+    /* CSS SLUT TABEL */
+
+    /* CSS SLUT FORSIDE billeder flex responsiv */
+
+
+    bestil-knap {
+        padding: 50px;
+    }
+
+    h3 {
+        padding-left: 20px;
+        padding-top: 20px;
+        font-size: 30px;
+    }
+
+    .grid-container-chokolade {
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        padding-top: 20px;
+        text-align: center;
+        margin: 20px;
+
+    }
+
+    .chokokiks {
+        grid-area: 1 / 1 / 2 / 2;
+        padding: 10px;
+    }
+
+    .KEX {
+        grid-area: 1 / 2 / 2 / 3;
+        padding: 10px;
+    }
+
+    .kinder {
+        grid-area: 1 / 3 / 2 / 4;
+        padding: 10px;
+    }
+
+    .oreo {
+        grid-area: 1 / 4 / 2 / 5;
+        padding: 10px;
+    }
+
+    .p-tearte {
+        grid-area: 1 / 5 / 2 / 6;
+        padding: 10px;
+    }
+
+    .smarties {
+        grid-area: 1 / 6 / 2 / 7;
+        padding: 10px;
+    }
+
+    .smil-choko {
+        grid-area: 1 / 7 / 2 / 8;
+        padding: 10px;
+    }
+
+    .toblerone {
+        grid-area: 1 / 8 / 2 / 9;
+        padding: 10px;
+    }
+
+    .lion {
+        grid-area: 1 / 9 / 2 / 10;
+        padding: 10px;
+    }
+
+
+    .grid-container-karamel {
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        padding-top: 20px;
+        text-align: center;
+        margin: 20px;
+        justify-content: space-between;
+    }
+
+    .salt-karamel {
+        grid-area: 1 / 1 / 2 / 2;
+        padding: 10px;
+    }
+
+    .sweet-karamel {
+        grid-area: 1 / 2 / 2 / 3;
+        padding: 10px;
+    }
+
+    .mars {
+        grid-area: 1 / 3 / 2 / 4;
+        padding: 10px;
+    }
+
+
+
+    .grid-container-boern {
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        padding-top: 20px;
+        text-align: center;
+        margin: 20px;
+
+    }
+
+    .sour {
+        grid-area: 1 / 1 / 2 / 2;
+        padding: 10px;
+    }
+
+    .tivoli {
+        grid-area: 1 / 2 / 2 / 3;
+        padding: 10px;
+    }
+
+    .skumfidus {
+        grid-area: 1 / 3 / 2 / 4;
+        padding: 10px;
+    }
+
+    .kylling1 {
+        grid-area: 1 / 4 / 2 / 5;
+        padding: 10px;
+    }
+
+    .kylling2 {
+        grid-area: 1 / 5 / 2 / 6;
+        padding: 10px;
+    }
+
+    .mogm {
+        grid-area: 1 / 6 / 2 / 7;
+        padding: 10px;
+    }
+
+    /*slut css grid til siden responsiv til mobil */
+
+
+    /*CSS START til siden "Om os" */
+
+
+    .container-1 {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .trustpilot {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+
+    .trustpilot-1 {
+        width: 100%;
+        margin: 2px;
+        justify-content: space-around;
+        display: block;
+
+    }
+
+    .trustpilot-2 {
+        width: 100%;
+        margin: 2px;
+        justify-content: space-around;
+        display: block;
+
+    }
+
+    .trustpilot-3 {
+        width: 100%;
+        margin: 2px;
+        justify-content: space-around;
+        display: block;
+
+    }
+
+    /*CSS SLUT til siden "Om os" */
+
+
+    /* START footer*/
+
+
+
+    .ft-butikker-tekst a {
+        color: #FF8FDF;
+        font-size: 15px;
+    }
+
+
+    /*sticky footer i bunden af siden (lyserrød)*/
+
+    body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+    }
+
+    .container {
+        flex: 1;
+        /* same as flex-grow: 1; */
+    }
+
+    /*responsiv flex*/
+
+    .ft-butikker-tekst a {
+        color: #FF8FDF;
+        font-size: 20px;
+    }
+
+    .ft-overskrift {
+
+        font-size: 30px;
+    }
+
+    .ft-main {
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #FF8FDF;
+    }
+
+    .ft-main-tekst {
+        text-align: center;
+        padding: 15px;
+        /*200px*/
+        ;
+        color: #FFF270;
+        width: 33%;
+    }
+
+    .ft-main-tekst a {
+        color: #FFF270;
+        font-size: 20px;
+    }
+
+
+    /*style sociale medier ikoner*/
+    .ft-social {
+        padding: 10px;
+    }
+
+    .ft-social-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 20px;
+        text-align: center;
+        width: 33%;
+    }
+
+    /* FOOTER SLUT*/
+
+
+    .ft-butikker-tekst {
+        width: 33%;
+        justify-content: space-evenly;
+    }
+
+    .ft-main-tekst {
+        width: 33%;
+        justify-content: space-evenly;
+    }
+
+    .ft-social-list {
+        width: 33%;
+    }
+
+    /* SLUT footer*/
+
+}
+
+
+
+
+
+/*CSS SLUT til siden "Om os" */
+
+
+/* Responsiv flex "Om os" */
+
+/*MEDIA QUERY MOBILE */
+@media all and (max-width: 599px) {
+    .container-1 {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+
+
+
+/* CSS START instagram billeder forside */
+
+/*MEDIA QUERY MOBILE */
+@media all and (max-width: 599px) {
+    .instagram {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .insta-2 {
+        display: none;
+    }
+
+}
+
+
+
+/*MEDIA QUERY TABLET AND ABOVE*/
+@media all and (min-width: 600px) {
+    .instagram {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/*MEDIA QUERY LAPTOP AND ABOVE*/
+
+@media all and (min-width: 1024px) {
+
+    .instagram {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .insta-1 {
+        margin-left: auto;
+        display: flex;
+    }
+
+    .insta-2 {
+        margin-right: auto;
+        min-height: inherit;
+    }
+}
+
+.instagram {
+
+    background-color: #FAFAFA;
+
+}
+
+
+/* CSS slut instagram billeder forside */
